@@ -1,3 +1,23 @@
+# Handcraftedhaven APP
+
+## Description
+Handcrafted Haven is a web app that connects artisans with customers, providing a marketplace for unique, handmade products. It promotes sustainable consumption and supports local creators by fostering community engagement. With user-friendly design and secure e-commerce features, it aims to become the primary online destination for discovering and purchasing handcrafted items
+
+## Team members 👤
+Charles Ofuasia
+Isaias Arturo Zuniga
+Chima
+Anderson Gil
+
+### Language: 
+JavaScript, NodeJs
+
+### Framework: 
+Next.js
+
+### Database:
+ Postress
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -34,3 +54,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
