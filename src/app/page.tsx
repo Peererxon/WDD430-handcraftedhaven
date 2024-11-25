@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Cards from '@/app/ui/Cards';
+import Header from "./ui/Header";
 
 export default function Home() {
   return (
