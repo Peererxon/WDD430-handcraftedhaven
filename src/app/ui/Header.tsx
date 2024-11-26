@@ -9,7 +9,7 @@ export default function Header() {
         <header className="flex items-center justify-between px-4 py-3 bg-white shadow-md">
     
         <Link href="/" className="flex items-center space-x-2">
-          <StoreIcon className="h-8 w-8 text-blue-600" />
+          <StoreIcon />
         </Link>
   
         <div className="flex-1 px-4">
