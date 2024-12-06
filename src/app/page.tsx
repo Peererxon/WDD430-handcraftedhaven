@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Cards from '@/app/ui/Cards';
-import Header from "./ui/Header";
+//import Header from "./ui/Header";
 
 export default function Home() {
   return (
@@ -54,7 +54,7 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
-      </footer>
+        </footer>
     </div>
   );
 }
