@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import React from 'react';
-import footer from './ui/footer';
+// import footer from './ui/footer';
+import {NextUIProvider} from "@nextui-org/react";
 
 export function Footer() {  
   return <footer>Footer content</footer>;
@@ -32,9 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen`}
       >
-        {children}
+        <NextUIProvider className="h-full">
+          {children}
+        </NextUIProvider>
       </body>
     </html>
   );
