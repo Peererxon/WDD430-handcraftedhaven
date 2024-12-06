@@ -1,8 +1,10 @@
-"use client";
+'use client';
 
 import React from "react";
 import {Button, Input, Checkbox, Link} from "@nextui-org/react";
 import {Icon} from "@iconify/react";
+import Form from "next/form"
+import {SignUpForm} from "@/app/sign-in/actions"
 
 export default function SignInPage() {
   const [isVisible, setIsVisible] = React.useState(false);
@@ -16,11 +18,8 @@ export default function SignInPage() {
       <div className="flex w-full max-w-sm flex-col gap-4 rounded-large px-8 pb-10 pt-6">
         <p className="pb-4 text-left text-3xl font-semibold">
           Sign Up
-          <span aria-label="emoji" className="ml-2" role="img">
-            👋
-          </span>
         </p>
-        <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
+        <Form action={SignUpForm as unknown as string} className="flex flex-col gap-4">
           <Input
             isRequired
             label="Username"
@@ -100,9 +99,9 @@ export default function SignInPage() {
           <Button color="primary" type="submit">
             Sign Up
           </Button>
-        </form>
+        </Form>
         <p className="text-center text-small">
-          <Link href="#" size="sm">
+          <Link href="/login"  size="sm">
             Already have an account? Log In
           </Link>
         </p>

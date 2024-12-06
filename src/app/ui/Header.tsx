@@ -28,9 +28,11 @@ export default function Header() {
           >
             Contact
           </Link>
-          <Button className="bg-blue-600 text-white hover:bg-blue-700">
-            Login
-          </Button>
+          <Link href='/login'>
+            <Button className="bg-blue-600 text-white hover:bg-blue-700">
+              Login
+            </Button>
+          </Link>
         </div>
       </header>
     );
