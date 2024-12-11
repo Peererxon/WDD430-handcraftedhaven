@@ -14,6 +14,7 @@
     "@nextui-org/card": "^2.0.34",
     "@nextui-org/divider": "^2.0.32",
     "@nextui-org/image": "^2.0.32",
+    "@nextui-org/react": "^2.4.8",
     "@nextui-org/system": "^2.2.6",
     "@nextui-org/theme": "^2.2.11",
     "@vercel/postgres": "^0.10.0",
@@ -24,6 +25,7 @@
     "react-dom": "19.0.0-rc-66855b96-20241106"
   },
   "devDependencies": {
+    "@iconify/react": "^5.0.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
