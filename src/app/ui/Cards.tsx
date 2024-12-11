@@ -1,6 +1,7 @@
 import { Divider } from "@nextui-org/divider";
 import CardItem from "./Card";
-export default function Cards() {
+import { fetchFilteredArtWorks } from "../lib/data";
+export default async function Cards({ query }: { query: string }) {
 	const list = [
 		{
 			title: "Orange",
@@ -44,15 +45,17 @@ export default function Cards() {
 		},
 	];
 
+	const artWorks = await fetchFilteredArtWorks(query);
+	console.log(artWorks);
 	return (
 		<>
-			<div className="grid grid-cols-2 gap-3 sm:grid-cols-1">
-				{list.map((item, index) => (
+			<div className="grid md:grid-cols-2 gap-3 sm:grid-cols-1">
+				{artWorks.map((item) => (
 					<CardItem
 						{...item}
-						description="lorrem bla bla bla lorem"
-						image={item.img}
-						key={index}
+						title={item.name}
+						image={"/images/mock-arwork.png"}
+						key={item.id}
 					/>
 				))}
 			</div>
