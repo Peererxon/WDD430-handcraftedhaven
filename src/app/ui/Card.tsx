@@ -21,13 +21,13 @@ function CardItem({
 					className="max-w-full"
 					width={300}
 				></Image>
-				<div className="sm:flex sm:flex-col sm:justify-center">
+				<div className="sm:flex sm:flex-col sm:justify-center w-9/12">
 					<p className="text-left text-xl">
 						<strong>{title}</strong>
 					</p>
 					<p className="hidden sm:block">{description}</p>
 
-					<p className=" text-md text-black text-center mt-2">{price}</p>
+					<p className=" text-md text-black text-left mt-2">{price}</p>
 				</div>
 			</CardBody>
 		</Card>
