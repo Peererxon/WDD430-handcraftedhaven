@@ -40,3 +40,28 @@ export async function fetchFilteredArtWorks(query: string) {
 		throw new Error("Failed to fetch artWorks.");
 	}
 }
+
+export async function fetchProductDetail (id: string){
+	try {
+		const productDetail = await sql<{
+			name: string,
+			description: string,
+			price: string,
+			categoryid: string
+		}>`
+		SELECT
+		products.name,
+		products.description,
+		products.price,
+		products.categoryid
+		FROM products
+		WHERE products.productid = ${id};
+		`
+		return productDetail.rows[0];
+
+	}catch (error) {
+		console.error('Database Error:', error);
+		throw new Error('Failed to fetch product details.');
+
+	}
+}
