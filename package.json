@@ -21,15 +21,18 @@
     "bcrypt": "^5.1.1",
     "framer-motion": "^11.11.17",
     "next": "15.0.3",
+    "next-auth": "5.0.0-beta.25",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "react@18.2.8": "link:types/react@18.2.8",
-    "use-debounce": "^10.0.4"
+    "use-debounce": "^10.0.4",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@iconify/react": "^5.0.2",
+    "@types/bcrypt": "^5.0.2",
     "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/react": "^19.0.0",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
