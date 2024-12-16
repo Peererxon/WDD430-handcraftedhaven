@@ -6,7 +6,7 @@ import Search from "./Search";
 
 export default function Header() {
     return (
-        <header className="flex items-center justify-between px-4 py-3 bg-white shadow-md">
+        <header className="flex items-center justify-between px-4 py-3 bg-white shadow-md w-full">
     
         <Link href="/" className="flex items-center space-x-2">
           <StoreIcon />
