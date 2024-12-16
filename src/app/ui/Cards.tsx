@@ -46,7 +46,6 @@ export default async function Cards({ query }: { query: string }) {
 	];
 
 	const artWorks = await fetchFilteredArtWorks(query);
-	console.log(artWorks);
 	return (
 		<>
 			<div className="grid md:grid-cols-2 gap-3 sm:grid-cols-1">

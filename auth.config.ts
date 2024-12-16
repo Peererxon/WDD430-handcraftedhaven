@@ -7,14 +7,11 @@ export const authConfig = {
 	callbacks: {
 		authorized({ auth, request: { nextUrl } }) {
 			const isLoggedIn = !!auth?.user;
-			console.log("Executed");
 
 			const isInteractingWithProduct = nextUrl.pathname.startsWith("/product");
 			if (isInteractingWithProduct) {
 				if (isLoggedIn) return true;
 				return false; // Redirect unauthenticated users to login page
-			} else if (isLoggedIn) {
-				return Response.redirect(new URL("/", nextUrl));
 			}
 			return true;
 		},

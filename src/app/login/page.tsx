@@ -18,8 +18,6 @@ export default function LoginPage() {
 		undefined
 	);
 
-	console.log(useActionState);
-
 	return (
 		<div className="flex h-full w-full items-center justify-center">
 			<div className="flex w-full max-w-sm flex-col gap-4 rounded-large px-8 pb-10 pt-6">
@@ -86,7 +84,7 @@ export default function LoginPage() {
 					</div>
 				</Form>
 				<p className="text-center text-small">
-					<Link href="/sign-in" size="sm">
+					<Link href="/sign-up" size="sm">
 						Create an account
 					</Link>
 				</p>
