@@ -11,7 +11,7 @@ import {
 } from "@nextui-org/react";
 import { Icon } from "@iconify/react";
 import Form from "next/form";
-import { signUp, State } from "@/app/sign-in/actions";
+import { signUp, State } from "@/app/sign-up/actions";
 
 export default function SignInPage() {
 	const [isVisible, setIsVisible] = React.useState(false);
