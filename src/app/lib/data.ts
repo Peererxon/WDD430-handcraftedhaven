@@ -1,4 +1,5 @@
 import { sql } from "@vercel/postgres";
+import { Product } from "./definitions";
 
 export async function fetchFilteredArtWorks(query: string) {
 	try {
@@ -41,27 +42,33 @@ export async function fetchFilteredArtWorks(query: string) {
 	}
 }
 
-export async function fetchProductDetail (id: string){
+export async function fetchProductDetail(id: string): Promise<Product> {
 	try {
-		const productDetail = await sql<{
-			name: string,
-			description: string,
-			price: string,
-			categoryid: string
-		}>`
+		const productDetail = await sql`
 		SELECT
-		products.name,
-		products.description,
-		products.price,
-		products.categoryid
-		FROM products
-		WHERE products.productid = ${id};
-		`
-		return productDetail.rows[0];
-
-	}catch (error) {
-		console.error('Database Error:', error);
-		throw new Error('Failed to fetch product details.');
-
+		p.name,
+		p.description,
+		p.price,
+		p.categoryid,
+		img.imagebase64,
+		img.imageid,
+		comments.comment,
+		comments.reviewid
+		FROM products AS p
+		LEFT JOIN productimages AS img ON p.productid = img.productid
+		LEFT JOIN reviews as comments ON p.productid = comments.productid
+		WHERE p.productid = ${id};
+		`;
+		const productFromDb = productDetail.rows[0];
+		return {
+			title: productFromDb.name,
+			description: productFromDb.description,
+			price: productFromDb.price,
+			comments: productFromDb.comment,
+			images: [productFromDb?.imagebase64 || ""],
+		};
+	} catch (error) {
+		console.error("Database Error:", error);
+		throw new Error("Failed to fetch product details.");
 	}
 }
