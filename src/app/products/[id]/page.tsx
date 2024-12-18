@@ -2,6 +2,7 @@
 
 import { fetchProductDetail } from "@/app/lib/data";
 import CarrouselImages from "@/app/ui/CarrouselImages";
+import { PageProps } from "@root/.next/types/app/page";
 
 // Example data
 const exampleProduct = {
@@ -19,10 +20,8 @@ const exampleProduct = {
 	],
 };
 
-export default async function ProductDetailPage(props: {
-	params: { id: string };
-}) {
-	const id = await props.params.id;
+export default async function ProductDetailPage(props: PageProps) {
+	const { id } = await props.params;
 
 	try {
 		const product = await fetchProductDetail(id);
