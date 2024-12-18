@@ -4,6 +4,7 @@ import { Divider } from "@nextui-org/divider";
 import CardItem from "./Card";
 import { Link } from "@nextui-org/react";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function CardsClient({ artWorks }: { artWorks: any[] }) {
 	return (
 		<>
