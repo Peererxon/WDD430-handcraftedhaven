@@ -9,7 +9,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
 	return (
 		<NextUIProvider className="h-screen" navigate={router.push}>
-			<div className="h-full flex flex-col justifybetween">
+			<div className="min-h-full flex flex-col justify-between">
 			{children}
 			</div>
 		</NextUIProvider>
