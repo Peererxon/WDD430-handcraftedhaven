@@ -22,7 +22,7 @@ const exampleProduct = {
 export default async function ProductDetailPage(props: {
 	params: { id: string };
 }) {
-	const id = props.params.id;
+	const id = await props.params.id;
 
 	try {
 		const product = await fetchProductDetail(id);

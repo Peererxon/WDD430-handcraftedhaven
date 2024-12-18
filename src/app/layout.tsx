@@ -4,6 +4,8 @@ import "./globals.css";
 import React from "react";
 // import footer from './ui/footer';
 import { Providers } from "./providers";
+import Header from "./ui/Header";
+import Footer from "./ui/Footer";
 
 const geistSans = localFont({
 	src: "./fonts/GeistVF.woff",
@@ -31,7 +33,9 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen`}
 			>
+				<Header />
 				<Providers>{children}</Providers>
+				<Footer />
 			</body>
 		</html>
 	);
