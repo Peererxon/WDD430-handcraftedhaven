@@ -16,7 +16,7 @@ export default async function Header() {
 				<Search />
 			</div>
 			<div className="flex items-center space-x-4">
-				<Link
+				{/* <Link
 					href="#"
 					className="text-gray-600 hover:text-blue-600 transition duration-200"
 				>
@@ -27,7 +27,7 @@ export default async function Header() {
 					className="text-gray-600 hover:text-blue-600 transition duration-200"
 				>
 					Contact
-				</Link>
+				</Link> */}
 
 				{isLoggedIn ? (
 					<form

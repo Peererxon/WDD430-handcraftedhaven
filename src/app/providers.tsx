@@ -8,8 +8,10 @@ export function Providers({ children }: { children: React.ReactNode }) {
 	const router = useRouter();
 
 	return (
-		<NextUIProvider className="" navigate={router.push}>
+		<NextUIProvider className="h-screen" navigate={router.push}>
+			<div className="h-full flex flex-col justifybetween">
 			{children}
+			</div>
 		</NextUIProvider>
 	);
 }

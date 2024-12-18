@@ -33,9 +33,11 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen`}
 			>
-				<Header />
-				<Providers>{children}</Providers>
-				<Footer />
+				<Providers>
+					<Header />
+					{children}
+					<Footer />
+				</Providers>
 			</body>
 		</html>
 	);
